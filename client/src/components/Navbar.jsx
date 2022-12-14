@@ -35,7 +35,7 @@ const Navbar = () => {
           title={address ? "Create campaign" : "Connect"}
           styles={address ? "bg-[#1dc071]" : "bg-[#8c6dfd]"}
           handleClick={() => {
-            if (address) navigate("create-campagin");
+            if (address) navigate("create-campaign");
             else connect();
           }}
         />
