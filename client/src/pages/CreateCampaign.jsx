@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 
 import { money } from "../assets";
-import { CustomButton } from "../components";
+import { CustomButton, FormField } from "../components";
 import { checkIfImage } from "../utils";
 
 const CreateCampaign = () => {
@@ -35,8 +35,28 @@ const CreateCampaign = () => {
         className="w-full mt-[65px] flex flex-col gap-[30px]"
       >
         <div className="flex flex-wrap gap-[40px]">
-          <FormField />
+          <FormField
+            labelName="Your Name *"
+            placeholder="John Doe"
+            inputType="text"
+            value={form.name}
+            handlechange={() => {}}
+          />
+          <FormField
+            labelName="Campaign Title *"
+            placeholder="Write a title"
+            inputType="text"
+            value={form.title}
+            handlechange={() => {}}
+          />
         </div>
+        <FormField
+          labelName="Story *"
+          placeholder="Write your story"
+          isTextArea
+          value={form.description}
+          handlechange={() => {}}
+        />
       </form>
     </div>
   );
